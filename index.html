@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TelefonyGSM.pl Allegro template</title>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 970px;
+}
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-11 {
+  width: 91.66666667%;
+}
+.col-xs-10 {
+  width: 83.33333333%;
+}
+.col-xs-9 {
+  width: 75%;
+}
+.col-xs-8 {
+  width: 66.66666667%;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-5 {
+  width: 41.66666667%;
+}
+.col-xs-4 {
+  width: 33.33333333%;
+}
+.col-xs-3 {
+  width: 25%;
+}
+.col-xs-2 {
+  width: 16.66666667%;
+}
+.col-xs-1 {
+  width: 8.33333333%;
+}
+.col-xs-offset-12 {
+  margin-left: 100%;
+}
+.col-xs-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-xs-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+.col-xs-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-xs-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+.col-xs-offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-xs-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+.col-xs-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-xs-offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-xs-offset-0 {
+  margin-left: 0%;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.dl-horizontal dt {
+    float: left;
+    width: 60px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd {
+    margin-left: 80px;
+}
+.center {
+    text-align: center;
+}
+.header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.offer-title {
+    border-bottom: 2px solid #333333;
+}
+.section-title {
+    border-bottom: 2px solid #e3e3e3;
+    margin-bottom: 20px;
+}
+.separator {
+    border-bottom: 2px solid #e3e3e3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contact {
+    margin-bottom: 0;
+    font-size: 18px;
+    /*line-height: 32px;*/
+}
+.contact ul {
+    margin-top: 0;
+}
+.lead, .lead ul li {
+    font-size: 18px;
+}
+.text-primary {
+    /*color: #005999;*/
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #005999;
+}
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: underline;
+}
+.description {
+    margin-top: 20px;
+}
+.picture {
+    margin-top: 20px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="row">
+            <div class="col-xs-6">
+                <img src="logo.svg" height="48" />
+            </div>
+            <div class="col-xs-3">
+                <dl class="dl-horizontal contact">
+                    <dt>
+                        <img src="mail.svg" height="32" />
+                    </dt>
+                    <dd>
+                        <a href="mailto:info@telefonygsm.pl">info@telefonygsm.pl</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-xs-3">
+                <dl class="dl-horizontal contact">
+                    <dt>
+                        <img src="call.svg" height="32" />
+                    </dt>
+                    <dd>
+                        <ul class="list-unstyled">
+                            <li><strong class="text-primary">801 011 799</strong></li>
+                            <li><strong class="text-primary">22 870 03 06</strong></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="offer-title">
+        <h1>Tytuł oferty</h1>
+    </div>
+    <div class="picture">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=Zdj%C4%99cie%20oferty&w=600&h=400" />
+    </div>
+    <div class="section-title">
+        <h2>Cechy i funkcje</h2>
+    </div>
+    <div class="description">
+        Opis oferty
+    </div>
+    <div class="section-title">
+        <h2>Bezpieczeństwo</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="center">
+                <img src="basket.svg" height="48" />
+                <h3>Gwarancja</h3>
+            </div>
+            <p class="lead">Sprzedajemy wyłącznie produkty nowe i objęte gwarancją producenta.<br>Zawsze wystawiamy faktury VAT lub paragony na pełną wartość produktu wraz z kosztami przesyłki oraz podatkiem VAT 23%.</p>
+        </div>
+        <div class="col-xs-6">
+            <div class="center">
+                <img src="return.svg" height="48" />
+                <h3>Zwroty</h3>
+            </div>
+            <p class="lead">Przy zakupie na kilku różnych aukcjach za przesyłkę płacisz tylko raz.<br>Masz prawo zwrócić zakupiony produkt bez podawania przyczyny w ciągu 15 dni od daty otrzymania przesyłki.</p>
+        </div>
+    </div>
+    <div class="section-title">
+        <h2>Kontakt</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="center">
+                <img src="location.svg" height="48" />
+                <h3>Sklep detaliczny</h3>
+                <p class="lead">Zapraszamy do naszego sklepu detalicznego<br><strong>w Warszawie przy ul. Grochowskiej 14 B</strong><br>od poniedziałku do piątku<br>w godzinach 10:00 - 18:00</p>
+                <img src="mapa.svg" height="400" />
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="center">
+                <img src="call.svg" height="48" />
+                <h3>Kontakt</h3>
+                <ul class="lead list-unstyled">
+                    <li>Firma P. H. U. PAMAR</li>
+                    <li>ul. Grochowska 14 B</li>
+                    <li>04-217 Warszawa</li>
+                </ul>
+                <h3>E-mail</h3>
+                <ul class="lead list-unstyled">
+                    <li><a href="mailto:info@telefonygsm.pl">info@telefonygsm.pl</a></li>
+                </ul>
+                <h3>Telefon</h3>
+                <ul class="lead list-unstyled">
+                    <li>801 011 799</li>
+                    <li>22 870 03 06</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
