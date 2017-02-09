@@ -31,7 +31,8 @@ body {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 970px;
+  width: 100%;
+  min-width: 1000px;
 }
 .container-fluid {
   margin-right: auto;
@@ -189,29 +190,42 @@ dl {
     border-bottom: 2px solid #e3e3e3;
     margin-bottom: 20px;
 }
-.separator {
-    border-bottom: 2px solid #e3e3e3;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.contact {
-    margin-bottom: 0;
+.header__mail {
+    display: inline-block;
+    padding: 14px 0;
     font-size: 18px;
-    /*line-height: 32px;*/
 }
-.contact ul {
+.header__mail img {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.header__phone {
+    display: inline-block;
+}
+.header__phone img {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 14px;
+    margin-right: 20px;
+}
+.header__phone ul {
+    display: inline-block;
+    list-style: none;
     margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+.header__phone ul li {
+    font-size: 18px;
+    line-height: 30px;
 }
 .lead, .lead ul li {
     font-size: 18px;
 }
-.text-primary {
-    /*color: #005999;*/
-}
 a {
   background-color: transparent;
   text-decoration: none;
-  color: #005999;
+  color: #004c80;
 }
 a:active,
 a:hover {
@@ -225,69 +239,93 @@ a:hover {
     margin-top: 20px;
     text-align: center;
 }
+.text-right {
+    text-align: right;
+}
+h1, h2, h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.7em;
+    font-weight: bold;
+    color: #000000;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.2em;
+}
 </style>
 </head>
 <body>
 <div class="container">
     <div class="header">
         <div class="row">
-            <div class="col-xs-6">
-                <img src="logo.svg" height="48" />
+            <div class="col-xs-4">
+                <img src="http://zakupygps.pl/template/telefonygsm-logo.svg" alt="" height="60" />
             </div>
-            <div class="col-xs-3">
-                <dl class="dl-horizontal contact">
-                    <dt>
-                        <img src="mail.svg" height="32" />
-                    </dt>
-                    <dd>
-                        <a href="mailto:info@telefonygsm.pl">info@telefonygsm.pl</a>
-                    </dd>
-                </dl>
+            <div class="col-xs-4 text-right">
+                <div class="header__mail">
+                    <img src="http://zakupygps.pl/template/mail.svg" alt="" height="32" />
+                    <a href="mailto:info@telefonygsm.pl">info@telefonygsm.pl</a>
+                </div>
             </div>
-            <div class="col-xs-3">
-                <dl class="dl-horizontal contact">
-                    <dt>
-                        <img src="call.svg" height="32" />
-                    </dt>
-                    <dd>
-                        <ul class="list-unstyled">
-                            <li><strong class="text-primary">801 011 799</strong></li>
-                            <li><strong class="text-primary">22 870 03 06</strong></li>
-                        </ul>
-                    </dd>
-                </dl>
+            <div class="col-xs-4 text-right">
+                <div class="header__phone">
+                    <img src="http://zakupygps.pl/template/call.svg" alt="" height="32" />
+                    <ul class="list-unstyled">
+                        <li>801 011 799</li>
+                        <li>22 870 03 06</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li>22 879 93 80</li>
+                        <li>22 610 93 13</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <div class="offer-title">
-        <h1>Tytuł oferty</h1>
+        <h1>{$productLang.name}</h1>
     </div>
-    <div class="picture">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=60&txt=Zdj%C4%99cie%20oferty&w=600&h=400" />
-    </div>
-    <div class="section-title">
-        <h2>Cechy i funkcje</h2>
-    </div>
+    <div class="picture">{$images.html}</div>
     <div class="description">
-        Opis oferty
+        <p>{$productLang.description}</p>
+        <p>{$features.html}</p>
+        <p>{$attributes.html}</p>
     </div>
     <div class="section-title">
         <h2>Bezpieczeństwo</h2>
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <div class="center">
-                <img src="basket.svg" height="48" />
+            <div class="center"><img src="http://zakupygps.pl/template/basket.svg" alt="" height="48" />
                 <h3>Gwarancja</h3>
             </div>
-            <p class="lead">Sprzedajemy wyłącznie produkty nowe i objęte gwarancją producenta.<br>Zawsze wystawiamy faktury VAT lub paragony na pełną wartość produktu wraz z kosztami przesyłki oraz podatkiem VAT 23%.</p>
+            <p class="lead">
+                Sprzedajemy wyłącznie produkty nowe i objęte gwarancją producenta.
+            </p>
+            <p class="lead">
+                Zawsze wystawiamy faktury VAT lub paragony na pełną wartość produktu wraz z kosztami przesyłki oraz podatkiem VAT 23%.
+            </p>
+            <p class="lead">
+                Wysyłki realizowane są za pośrednictwem firm GLS, Poczta Polska oraz InPost.
+            </p>
         </div>
         <div class="col-xs-6">
-            <div class="center">
-                <img src="return.svg" height="48" />
+            <div class="center"><img src="http://zakupygps.pl/template/return.svg" alt="" height="48" />
                 <h3>Zwroty</h3>
             </div>
-            <p class="lead">Przy zakupie na kilku różnych aukcjach za przesyłkę płacisz tylko raz.<br>Masz prawo zwrócić zakupiony produkt bez podawania przyczyny w ciągu 15 dni od daty otrzymania przesyłki.</p>
+            <p class="lead">
+                Przy zakupie na kilku różnych aukcjach za przesyłkę płacisz tylko raz.
+            </p>
+            <p class="lead">
+                Masz prawo zwrócić zakupiony produkt bez podawania przyczyny w ciągu 15 dni od daty otrzymania przesyłki.
+            </p>
         </div>
     </div>
     <div class="section-title">
@@ -295,16 +333,13 @@ a:hover {
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <div class="center">
-                <img src="location.svg" height="48" />
+            <div class="center"><img src="http://zakupygps.pl/template/location.svg" alt="" height="48" />
                 <h3>Sklep detaliczny</h3>
-                <p class="lead">Zapraszamy do naszego sklepu detalicznego<br><strong>w Warszawie przy ul. Grochowskiej 14 B</strong><br>od poniedziałku do piątku<br>w godzinach 10:00 - 18:00</p>
-                <img src="mapa.svg" height="400" />
-            </div>
+                <p class="lead">Zapraszamy do naszego sklepu detalicznego<br /><strong>w Warszawie przy ul. Grochowskiej 14 B</strong><br />od poniedziałku do piątku<br />w godzinach 10:00 - 18:00</p>
+                <img src="http://zakupygps.pl/template/mapa.svg" alt="" height="400" /></div>
         </div>
         <div class="col-xs-6">
-            <div class="center">
-                <img src="call.svg" height="48" />
+            <div class="center"><img src="http://zakupygps.pl/template/call.svg" alt="" height="48" />
                 <h3>Kontakt</h3>
                 <ul class="lead list-unstyled">
                     <li>Firma P. H. U. PAMAR</li>
@@ -319,6 +354,8 @@ a:hover {
                 <ul class="lead list-unstyled">
                     <li>801 011 799</li>
                     <li>22 870 03 06</li>
+                    <li>22 879 93 80</li>
+                    <li>22 610 93 13</li>
                 </ul>
             </div>
         </div>
