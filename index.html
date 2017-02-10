@@ -192,7 +192,7 @@ dl {
 }
 .header__mail {
     display: inline-block;
-    padding: 14px 0;
+    padding: 16px 0;
     font-size: 18px;
 }
 .header__mail img {
@@ -205,7 +205,7 @@ dl {
 .header__phone img {
     display: inline-block;
     vertical-align: top;
-    margin-top: 14px;
+    margin-top: 12px;
     margin-right: 20px;
 }
 .header__phone ul {
@@ -259,6 +259,10 @@ h2 {
 h3 {
     font-size: 1.2em;
 }
+.map {
+    width: 100%;
+    max-width: 600px;
+}
 </style>
 </head>
 <body>
@@ -270,13 +274,13 @@ h3 {
             </div>
             <div class="col-xs-4 text-right">
                 <div class="header__mail">
-                    <img src="http://zakupygps.pl/template/mail.svg" alt="" height="32" />
+                    <img src="http://zakupygps.pl/template/email.svg" alt="" height="28" />
                     <a href="mailto:info@telefonygsm.pl">info@telefonygsm.pl</a>
                 </div>
             </div>
             <div class="col-xs-4 text-right">
                 <div class="header__phone">
-                    <img src="http://zakupygps.pl/template/call.svg" alt="" height="32" />
+                    <img src="http://zakupygps.pl/template/telefon.svg" alt="" height="36" />
                     <ul class="list-unstyled">
                         <li>801 011 799</li>
                         <li>22 870 03 06</li>
@@ -299,11 +303,12 @@ h3 {
         <p>{$attributes.html}</p>
     </div>
     <div class="section-title">
-        <h2>Bezpieczeństwo</h2>
+        <h2>Bezpieczne zakupy</h2>
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <div class="center"><img src="http://zakupygps.pl/template/basket.svg" alt="" height="48" />
+            <div class="center">
+                <img src="http://zakupygps.pl/template/gwarancja.svg" alt="" height="48" />
                 <h3>Gwarancja</h3>
             </div>
             <p class="lead">
@@ -312,19 +317,41 @@ h3 {
             <p class="lead">
                 Zawsze wystawiamy faktury VAT lub paragony na pełną wartość produktu wraz z kosztami przesyłki oraz podatkiem VAT 23%.
             </p>
-            <p class="lead">
-                Wysyłki realizowane są za pośrednictwem firm GLS, Poczta Polska oraz InPost.
-            </p>
         </div>
         <div class="col-xs-6">
-            <div class="center"><img src="http://zakupygps.pl/template/return.svg" alt="" height="48" />
-                <h3>Zwroty</h3>
+            <div class="center"><img src="http://zakupygps.pl/template/platnosc.svg" alt="" height="48" />
+                <h3>Płatność</h3>
+            </div>
+            <p class="lead">
+                Za zakupiony sprzęt możesz zapłacić gotówką przy odbiorze, kartą płatniczą, przelewem lub w systemie ratalnym.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="center">
+                <img src="http://zakupygps.pl/template/przesylka.svg" alt="" height="48" />
+                <h3>Przesyłka</h3>
             </div>
             <p class="lead">
                 Przy zakupie na kilku różnych aukcjach za przesyłkę płacisz tylko raz.
             </p>
             <p class="lead">
-                Masz prawo zwrócić zakupiony produkt bez podawania przyczyny w ciągu 15 dni od daty otrzymania przesyłki.
+                Wysyłki realizowane są za pośrednictwem firm GLS, Poczta Polska oraz InPost
+            </p>
+            <p class="lead">
+                Sprzęt możesz również odebrać w naszym salonie sprzedaży.
+            </p>
+        </div>
+        <div class="col-xs-6">
+            <div class="center"><img src="http://zakupygps.pl/template/serwis.svg" alt="" height="48" />
+                <h3>Zwroty i serwis</h3>
+            </div>
+            <p class="lead">
+                Masz prawo jako konsument zwrócić zakupiony produkt bez podawania przyczyny w ciągu 14 dni od daty otrzymania przesyłki.
+            </p>
+            <p class="lead">
+                Prowadzimy serwis pogwarancyjny telefonów komórkowych, tabletów i innych urządzeń elektronicznych.
             </p>
         </div>
     </div>
@@ -333,16 +360,19 @@ h3 {
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <div class="center"><img src="http://zakupygps.pl/template/location.svg" alt="" height="48" />
+            <div class="center">
+                <img src="http://zakupygps.pl/template/sklep.svg" alt="" height="48" />
                 <h3>Sklep detaliczny</h3>
                 <p class="lead">Zapraszamy do naszego sklepu detalicznego<br /><strong>w Warszawie przy ul. Grochowskiej 14 B</strong><br />od poniedziałku do piątku<br />w godzinach 10:00 - 18:00</p>
-                <img src="http://zakupygps.pl/template/mapa.svg" alt="" height="400" /></div>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=TelefonyGSM,Warszawa&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyBNgYsaG3J7nT3R6kZYi6qQnlh8i0GiB1A&scale=2&markers=color:red%7C52.2367696,21.1220158" alt="" class="map" />
+                <img src="http://zakupygps.pl/template/mapa.svg" alt="" height="400" />
+            </div>
         </div>
         <div class="col-xs-6">
-            <div class="center"><img src="http://zakupygps.pl/template/call.svg" alt="" height="48" />
+            <div class="center"><img src="http://zakupygps.pl/template/kontakt.svg" alt="" height="48" />
                 <h3>Kontakt</h3>
                 <ul class="lead list-unstyled">
-                    <li>Firma P. H. U. PAMAR</li>
+                    <li>Firma P.H.U. PAMAR</li>
                     <li>ul. Grochowska 14 B</li>
                     <li>04-217 Warszawa</li>
                 </ul>
